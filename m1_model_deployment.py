@@ -224,7 +224,7 @@ def predict_price_vh(Year, Mileage, State, Make, Model):
     df['Mill_per_year'] = df['Mileage'] / df['years_of_use']
 
     # Crear variable Antiguo ###############################################################################################
-    df['Antiguo'] = (df['years_of_use'] > 20).astype(np.int)
+    df['Antiguo'] = (df['years_of_use'] > 20).astype(int)
     
     # Escalamiento de datos RobusterScaler #################################################################################
     scaler = RobustScaler()
